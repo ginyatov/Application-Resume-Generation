@@ -26,6 +26,7 @@ export default createStore({
     },
 
     initConnectionToFireBase: ({ state, commit }) => {
+      console.log(process.env);
       refDatabase.on("value", (snapshot) => {
         const data = snapshot.val();
 
